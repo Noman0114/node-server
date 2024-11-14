@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ['http://localhost:3000', 'https://myreeldream-app.vercel.app'],
+    origin: 'http://localhost:3000',
     // Allow requests from your Next.js frontend
     methods: ['GET', 'POST'], // Allow specific methods
     allowedHeaders: ['Content-Type'], // Specify allowed headers if needed
