@@ -4,6 +4,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import dataRoutes from './routes/dataRoutes.js';
 import dataPost from './routes/dataPost.js';
+import employeeRoutes from './routes/harisApi.js';
+
 
 dotenv.config();
 
@@ -15,7 +17,7 @@ app.use(express.json()); // for parsing application/json
 // Use the data routes
 app.use('/', dataRoutes);
 app.use('/', dataPost);
-
+app.use('/api', employeeRoutes);
 // Start the server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
